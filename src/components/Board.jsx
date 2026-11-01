@@ -121,10 +121,10 @@ const Base = ({ startRow, startCol, color }) => (
 
 export default function Board({ children }) {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '1rem', fontFamily: 'system-ui, sans-serif' }}>
+    <div className="ludo-board-shell" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '1rem', fontFamily: 'system-ui, sans-serif' }}>
       
       {/* Header section with NSE Logo */}
-      <div style={{ textAlign: 'center', marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div className="ludo-board-header" style={{ textAlign: 'center', marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1.25rem', marginBottom: '0.6rem', flexWrap: 'wrap' }}>
           <div style={{
             backgroundColor: '#ffffff',
@@ -176,7 +176,7 @@ export default function Board({ children }) {
       </div>
 
       {/* Board container */}
-      <div style={{
+      <div className="ludo-board-grid" style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(15, 40px)',
         gridTemplateRows: 'repeat(15, 40px)',

@@ -1,1 +1,186 @@
-/* Board styles — filled in during later build steps */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  touch-action: manipulation;
+}
+
+.game-screen {
+  width: 100%;
+}
+
+.ludo-board-shell {
+  width: 100%;
+  max-width: 660px;
+}
+
+.ludo-board-grid {
+  width: min(100%, 600px);
+  aspect-ratio: 1;
+  grid-template-columns: repeat(15, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(15, minmax(0, 1fr)) !important;
+  flex: 0 0 auto;
+}
+
+.registration-screen,
+.results-screen {
+  width: 100%;
+}
+
+@media (max-width: 1050px) {
+  .game-screen {
+    flex-direction: column;
+    align-items: center !important;
+    gap: 1rem !important;
+    padding: 1rem 0.5rem 2rem !important;
+  }
+
+  .game-board-area,
+  .game-sidebar {
+    width: min(100%, 660px);
+  }
+
+  .game-sidebar {
+    min-width: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .ludo-board-shell {
+    padding: 0.5rem !important;
+    margin: 0 auto;
+  }
+
+  .ludo-board-header {
+    margin-bottom: 0.75rem !important;
+    max-width: 100%;
+  }
+
+  .ludo-board-header h1 {
+    font-size: clamp(1.45rem, 5vw, 2.2rem) !important;
+  }
+
+  .ludo-board-header p {
+    font-size: clamp(0.55rem, 2vw, 0.78rem) !important;
+    letter-spacing: 0.03em !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .ludo-board-shell {
+    padding: 0.25rem !important;
+  }
+
+  .ludo-board-grid {
+    width: min(100%, calc(100vw - 24px));
+    border-width: 2px !important;
+    border-radius: 8px !important;
+  }
+
+  .game-screen {
+    padding-left: 0.35rem !important;
+    padding-right: 0.35rem !important;
+  }
+
+  .game-sidebar {
+    gap: 0.85rem !important;
+  }
+
+  .registration-header {
+    position: relative !important;
+    padding: 0.75rem 1rem !important;
+    gap: 0.65rem;
+    align-items: flex-start !important;
+    flex-wrap: wrap;
+  }
+
+  .registration-header > div:first-child {
+    gap: 0.65rem !important;
+  }
+
+  .registration-header > div:first-child > div:last-child > span {
+    font-size: 1rem !important;
+  }
+
+  .registration-main {
+    padding: 1.25rem 0.85rem 2rem !important;
+  }
+
+  .registration-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 1rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .registration-card {
+    padding: 1rem !important;
+    border-radius: 16px !important;
+  }
+
+  .registration-launch-bar {
+    padding: 1rem !important;
+    gap: 1rem !important;
+    align-items: stretch !important;
+  }
+
+  .registration-launch-bar > div:first-child {
+    width: 100%;
+    gap: 0.75rem !important;
+  }
+
+  .registration-launch-bar > div:first-child > div:nth-child(2) {
+    display: none;
+  }
+
+  .registration-launch-bar > button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.9rem 1rem !important;
+  }
+
+  .results-screen {
+    padding: 1.5rem 0.85rem !important;
+  }
+
+  .results-screen h1 {
+    font-size: clamp(2rem, 9vw, 3rem) !important;
+  }
+
+  .results-screen > div > div[style*="justify-content: space-between"] {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .ludo-board-header > div:first-child {
+    gap: 0.6rem !important;
+  }
+
+  .ludo-board-header > div:nth-child(2) {
+    padding: 0.35rem 0.65rem !important;
+  }
+
+  .ludo-board-header > div:nth-child(2) span {
+    font-size: 0.8rem !important;
+  }
+}

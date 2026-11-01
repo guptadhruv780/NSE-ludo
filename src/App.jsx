@@ -277,7 +277,7 @@ export default function App() {
       )}
       
       {screen === 'game' && (
-        <div style={{ 
+        <div className="game-screen" style={{
           minHeight: '100vh',
           background: 'radial-gradient(circle at 50% 0%, #1a1642 0%, #0d0c1c 65%, #07060e 100%)',
           padding: '2rem 1rem 3rem 1rem', 
@@ -313,7 +313,7 @@ export default function App() {
           }} />
           
           {/* Main Board Area */}
-          <div style={{ flex: '0 0 auto', position: 'relative', zIndex: 1 }}>
+          <div className="game-board-area" style={{ flex: '0 0 auto', position: 'relative', zIndex: 1 }}>
             <Board>
               {tokenPlacements.map((tp, idx) => {
                 const player = players[tp.pIndex];
@@ -368,7 +368,7 @@ export default function App() {
           </div>
 
           {/* Sidebar / HUD */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', minWidth: '340px', position: 'relative', zIndex: 1, marginTop: '0.5rem' }}>
+          <div className="game-sidebar" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', minWidth: '340px', position: 'relative', zIndex: 1, marginTop: '0.5rem' }}>
             
             {/* Players Card */}
             <div style={{ 

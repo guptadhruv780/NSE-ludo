@@ -154,7 +154,7 @@ export default function RegistrationScreen({ onContinue }) {
   };
 
   return (
-    <div style={{
+    <div className="registration-screen" style={{
       minHeight: '100vh',
       background: 'radial-gradient(circle at 50% 0%, #1a1642 0%, #0d0c1c 70%, #07060e 100%)',
       color: '#e4e0f7',
@@ -188,7 +188,7 @@ export default function RegistrationScreen({ onContinue }) {
       }} />
 
       {/* Top Navigation Bar with NSE Logo and Slogan */}
-      <header style={{
+      <header className="registration-header" style={{
         position: 'sticky',
         top: 0,
         zIndex: 50,
@@ -267,7 +267,7 @@ export default function RegistrationScreen({ onContinue }) {
       </header>
 
       {/* Main Container */}
-      <main style={{ maxWidth: '1240px', margin: '0 auto', padding: '2.5rem 1.5rem', position: 'relative', zIndex: 1 }}>
+      <main className="registration-main" style={{ maxWidth: '1240px', margin: '0 auto', padding: '2.5rem 1.5rem', position: 'relative', zIndex: 1 }}>
         
         {/* Header Section */}
         <div style={{
@@ -395,7 +395,7 @@ export default function RegistrationScreen({ onContinue }) {
         {/* Form Container */}
         <form onSubmit={handleSubmit}>
           {/* Dynamic Grid */}
-          <div style={{
+          <div className="registration-grid" style={{
             display: 'grid',
             gridTemplateColumns: playerCount === 2 
               ? 'repeat(auto-fit, minmax(360px, 1fr))' 
@@ -410,7 +410,7 @@ export default function RegistrationScreen({ onContinue }) {
               const isHost = index === 0;
 
               return (
-                <div
+                <div className="registration-card"
                   key={index}
                   style={{
                     backgroundColor: 'rgba(26, 24, 52, 0.75)',
@@ -812,7 +812,7 @@ export default function RegistrationScreen({ onContinue }) {
           </div>
 
           {/* Launch Action Bar */}
-          <div style={{
+          <div className="registration-launch-bar" style={{
             borderRadius: '24px',
             backgroundColor: 'rgba(26, 24, 52, 0.85)',
             backdropFilter: 'blur(25px)',

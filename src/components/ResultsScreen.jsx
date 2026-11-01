@@ -21,7 +21,7 @@ export default function ResultsScreen({ players, onRestart }) {
   };
 
   return (
-    <div style={{ 
+    <div className="results-screen" style={{
       minHeight: '100vh',
       background: 'radial-gradient(circle at 50% 0%, #1a1642 0%, #0d0c1c 70%, #07060e 100%)',
       padding: '3rem 1.5rem', 
