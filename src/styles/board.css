@@ -203,3 +203,25 @@ button {
   .players-card { padding: 1rem !important; }
   .game-sidebar { padding: 0 4px; }
 }
+
+.mobile-turn-label { display: none; }
+@media (max-width: 1050px) {
+  .game-screen { padding-bottom: calc(180px + env(safe-area-inset-bottom, 0px)) !important; }
+  .dice-card {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+    border-radius: 16px 16px 0 0 !important;
+    background-color: rgba(26, 24, 52, 0.98) !important;
+    padding: 8px 12px calc(10px + env(safe-area-inset-bottom, 0px)) !important;
+    gap: 8px;
+    box-shadow: 0 -6px 24px rgba(0,0,0,.45) !important;
+  }
+  .mobile-turn-label { display: block; color: white; font-weight: 700; font-size: 0.85rem; max-width: 100%; overflow-wrap: anywhere; }
+  .dice-controls { flex-direction: row !important; justify-content: center; gap: 24px !important; width: 100%; }
+  .dice-controls button { min-height: 48px; justify-content: center; }
+  .dice-selection-hint { margin-top: 0 !important; padding: 4px 10px !important; font-size: 0.8rem !important; }
+  .dice-selection-hint br { display: none; }
+}

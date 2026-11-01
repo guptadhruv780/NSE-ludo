@@ -56,7 +56,7 @@ export default function Dice({ onRoll, disabled, currentPlayerColor }) {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+    <div className="dice-controls" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
       <div 
         style={{
           width: '60px',

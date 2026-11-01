@@ -500,6 +500,7 @@ export default function App() {
               flexDirection: 'column', 
               alignItems: 'center' 
             }}>
+              <div className="mobile-turn-label" aria-live="polite">Turn: {players[currentTurnIndex]?.name}</div>
               <Dice 
                 onRoll={handleDiceRoll} 
                 disabled={movingToken !== null || activeEffect !== null || pendingRoll !== null}
@@ -507,7 +508,7 @@ export default function App() {
               />
 
               {pendingRoll !== null && (
-                <div style={{ 
+                <div className="dice-selection-hint" style={{ 
                   marginTop: '1.25rem', 
                   backgroundColor: 'rgba(239, 68, 68, 0.15)',
                   border: '1px solid rgba(239, 68, 68, 0.4)',
