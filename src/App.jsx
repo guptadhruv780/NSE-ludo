@@ -1,3 +1,4 @@
+import Icon from './components/Icon.jsx';
 import React, { useState } from 'react';
 import RegistrationScreen from './components/RegistrationScreen.jsx';
 import Board from './components/Board.jsx';
@@ -371,7 +372,7 @@ export default function App() {
           <div className="game-sidebar" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', minWidth: '340px', position: 'relative', zIndex: 1, marginTop: '0.5rem' }}>
             
             {/* Players Card */}
-            <div style={{ 
+            <div className="players-card" style={{ 
               backgroundColor: 'rgba(26, 24, 52, 0.85)', 
               backdropFilter: 'blur(25px)',
               padding: '1.5rem', 
@@ -488,7 +489,7 @@ export default function App() {
             </div>
 
             {/* Dice Card */}
-            <div style={{ 
+            <div className="dice-card" style={{ 
               backgroundColor: 'rgba(26, 24, 52, 0.85)', 
               backdropFilter: 'blur(25px)',
               padding: '1.75rem', 
@@ -556,7 +557,7 @@ export default function App() {
                   transition: 'all 0.2s'
                 }}
               >
-                <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>download</span>
+                <Icon className="material-symbols-outlined" style={{ fontSize: '18px' }}>download</Icon>
                 <span>Export Standings (Excel)</span>
               </button>
 
@@ -580,7 +581,7 @@ export default function App() {
                   transition: 'all 0.2s'
                 }}
               >
-                <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>flag</span>
+                <Icon className="material-symbols-outlined" style={{ fontSize: '18px' }}>flag</Icon>
                 <span>End Game Early</span>
               </button>
             </div>

@@ -1,3 +1,4 @@
+import Icon from './Icon.jsx';
 import React from 'react';
 import { exportToExcel } from '../utils/exportExcel';
 
@@ -182,7 +183,7 @@ export default function ResultsScreen({ players, onRestart }) {
               transition: 'all 0.2s'
             }}
           >
-            <span className="material-symbols-outlined">download</span>
+            <Icon className="material-symbols-outlined">download</Icon>
             <span>Export Standings (Excel)</span>
           </button>
           
@@ -205,7 +206,7 @@ export default function ResultsScreen({ players, onRestart }) {
               transition: 'all 0.2s'
             }}
           >
-            <span className="material-symbols-outlined">replay</span>
+            <Icon className="material-symbols-outlined">replay</Icon>
             <span>Play Again</span>
           </button>
         </div>

@@ -1,3 +1,4 @@
+import Icon from './Icon.jsx';
 import React, { useState } from 'react';
 import { playSound } from '../utils/soundManager';
 
@@ -107,7 +108,7 @@ export default function Dice({ onRoll, disabled, currentPlayerColor }) {
           gap: '6px'
         }}
       >
-        <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>casino</span>
+        <Icon className="material-symbols-outlined" style={{ fontSize: '18px' }}>casino</Icon>
         <span>{rolling ? 'Rolling...' : 'Roll Dice'}</span>
       </button>
     </div>

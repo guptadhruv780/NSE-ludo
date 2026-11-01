@@ -1,3 +1,4 @@
+import Icon from './Icon.jsx';
 import { useState } from 'react';
 import { playSound } from '../utils/soundManager.js';
 
@@ -253,7 +254,7 @@ export default function RegistrationScreen({ onContinue }) {
           border: '1px solid rgba(243, 110, 33, 0.4)',
           boxShadow: '0 0 15px rgba(243, 110, 33, 0.2)'
         }}>
-          <span className="material-symbols-outlined" style={{ color: '#F36E21', fontSize: '20px' }}>psychology</span>
+          <Icon className="material-symbols-outlined" style={{ color: '#F36E21', fontSize: '20px' }}>psychology</Icon>
           <span style={{
             fontFamily: "'Outfit', sans-serif",
             fontWeight: 700,
@@ -293,7 +294,7 @@ export default function RegistrationScreen({ onContinue }) {
             borderRadius: '9999px',
             border: '1px solid rgba(243, 110, 33, 0.25)'
           }}>
-            <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>sports_esports</span>
+            <Icon className="material-symbols-outlined" style={{ fontSize: '16px' }}>sports_esports</Icon>
             <span>Player Registration</span>
           </div>
 
@@ -364,9 +365,9 @@ export default function RegistrationScreen({ onContinue }) {
                       gap: '0.45rem'
                     }}
                   >
-                    <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>
+                    <Icon className="material-symbols-outlined" style={{ fontSize: '18px' }}>
                       {count === 2 ? 'group' : count === 3 ? 'groups' : 'diversity_3'}
-                    </span>
+                    </Icon>
                     <span>{count} Players</span>
                   </button>
                 );
@@ -386,7 +387,7 @@ export default function RegistrationScreen({ onContinue }) {
               color: '#FFBE93',
               marginTop: '0.5rem'
             }}>
-              <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#F36E21' }}>verified</span>
+              <Icon className="material-symbols-outlined" style={{ fontSize: '16px', color: '#F36E21' }}>verified</Icon>
               <span style={{ fontWeight: 600 }}>Dodge The Scams · Trust The Safeguards · Race To Financial Freedom</span>
             </div>
           </div>
@@ -398,9 +399,9 @@ export default function RegistrationScreen({ onContinue }) {
           <div className="registration-grid" style={{
             display: 'grid',
             gridTemplateColumns: playerCount === 2 
-              ? 'repeat(auto-fit, minmax(360px, 1fr))' 
+              ? 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))' 
               : playerCount === 3 
-                ? 'repeat(auto-fit, minmax(320px, 1fr))' 
+                ? 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))' 
                 : 'repeat(auto-fit, minmax(270px, 1fr))',
             gap: '1.5rem',
             marginBottom: '2.5rem'
@@ -469,7 +470,7 @@ export default function RegistrationScreen({ onContinue }) {
                         <span>Player {index + 1}</span>
                       </div>
 
-                      <span
+                      <Icon
                         className="material-symbols-outlined"
                         style={{
                           color: isHost ? '#FBBF24' : '#10B981',
@@ -478,7 +479,7 @@ export default function RegistrationScreen({ onContinue }) {
                         title={isHost ? 'Player 1' : 'Player slot'}
                       >
                         {isHost ? 'military_tech' : 'check_circle'}
-                      </span>
+                      </Icon>
                     </div>
 
                     {/* Avatar & Token Hero Section */}
@@ -516,12 +517,12 @@ export default function RegistrationScreen({ onContinue }) {
                           justifyContent: 'center',
                           border: `1px solid ${colorInfo.borderActive}`
                         }}>
-                          <span
+                          <Icon
                             className="material-symbols-outlined"
                             style={{ color: colorInfo.hex, fontSize: '24px' }}
                           >
                             {colorInfo.icon}
-                          </span>
+                          </Icon>
                         </div>
                         <div style={{
                           position: 'absolute',
@@ -610,7 +611,7 @@ export default function RegistrationScreen({ onContinue }) {
                           Full Name *
                         </label>
                         <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-                          <span className="material-symbols-outlined" style={{
+                          <Icon className="material-symbols-outlined" style={{
                             position: 'absolute',
                             left: '12px',
                             color: focusedField === `${index}-name` ? colorInfo.hex : '#9CA3AF',
@@ -619,7 +620,7 @@ export default function RegistrationScreen({ onContinue }) {
                             transition: 'color 0.2s'
                           }}>
                             person
-                          </span>
+                          </Icon>
                           <input
                             type="text"
                             value={player.name}
@@ -666,7 +667,7 @@ export default function RegistrationScreen({ onContinue }) {
                           Organisation / Club *
                         </label>
                         <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-                          <span className="material-symbols-outlined" style={{
+                          <Icon className="material-symbols-outlined" style={{
                             position: 'absolute',
                             left: '12px',
                             color: focusedField === `${index}-org` ? colorInfo.hex : '#9CA3AF',
@@ -675,7 +676,7 @@ export default function RegistrationScreen({ onContinue }) {
                             transition: 'color 0.2s'
                           }}>
                             business
-                          </span>
+                          </Icon>
                           <input
                             type="text"
                             value={player.org}
@@ -722,7 +723,7 @@ export default function RegistrationScreen({ onContinue }) {
                           Phone Number (10 Digits) *
                         </label>
                         <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-                          <span className="material-symbols-outlined" style={{
+                          <Icon className="material-symbols-outlined" style={{
                             position: 'absolute',
                             left: '12px',
                             color: focusedField === `${index}-phone` ? colorInfo.hex : '#9CA3AF',
@@ -731,7 +732,7 @@ export default function RegistrationScreen({ onContinue }) {
                             transition: 'color 0.2s'
                           }}>
                             call
-                          </span>
+                          </Icon>
                           <input
                             type="text"
                             maxLength={10}
@@ -801,7 +802,7 @@ export default function RegistrationScreen({ onContinue }) {
                       padding: '2px 8px',
                       borderRadius: '6px'
                     }}>
-                      <span className="material-symbols-outlined" style={{ fontSize: '12px' }}>check</span>
+                      <Icon className="material-symbols-outlined" style={{ fontSize: '12px' }}>check</Icon>
                       Ready
                     </span>
                   </div>
@@ -839,7 +840,7 @@ export default function RegistrationScreen({ onContinue }) {
                   justifyContent: 'center',
                   border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}>
-                  <span className="material-symbols-outlined" style={{ color: '#F36E21', fontSize: '22px' }}>groups</span>
+                  <Icon className="material-symbols-outlined" style={{ color: '#F36E21', fontSize: '22px' }}>groups</Icon>
                 </div>
                 <div>
                   <p style={{
@@ -872,7 +873,7 @@ export default function RegistrationScreen({ onContinue }) {
                 fontSize: '0.85rem',
                 fontWeight: 600
               }}>
-                <span className="material-symbols-outlined" style={{ fontSize: '18px', color: '#F36E21' }}>lightbulb</span>
+                <Icon className="material-symbols-outlined" style={{ fontSize: '18px', color: '#F36E21' }}>lightbulb</Icon>
                 <span>"Soch Kar, Samajh Kar, Invest Kar"</span>
               </div>
             </div>
@@ -907,7 +908,7 @@ export default function RegistrationScreen({ onContinue }) {
                 e.currentTarget.style.boxShadow = '0 0 25px rgba(243, 110, 33, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4)';
               }}
             >
-              <span className="material-symbols-outlined" style={{ fontSize: '26px' }}>play_circle</span>
+              <Icon className="material-symbols-outlined" style={{ fontSize: '26px' }}>play_circle</Icon>
               <span>Start Game ({playerCount} Players)</span>
             </button>
           </div>

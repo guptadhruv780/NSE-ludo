@@ -184,3 +184,22 @@ button {
     font-size: 0.8rem !important;
   }
 }
+
+@media (max-width: 1050px) {
+  .dice-card { order: -1; }
+}
+@media (max-width: 640px) {
+  .registration-main h1 { font-size: 2rem !important; line-height: 1.15 !important; }
+  .registration-main > div:first-child { margin-bottom: 1.25rem !important; }
+  .registration-main p { overflow-wrap: anywhere; }
+  .registration-main div:has(> button:nth-child(3)) { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; padding: 4px !important; }
+  .registration-main div:has(> button:nth-child(3)) > button { padding: 0.75rem 0.3rem !important; justify-content: center; font-size: 0.8rem !important; gap: 4px !important; }
+  .registration-main div:has(> button:nth-child(3)) > button svg { display: none !important; }
+  .registration-main input { font-size: 16px !important; }
+  .registration-main svg { max-width: 26px; }
+  .registration-card { min-width: 0; }
+  .registration-card select { max-width: 115px; }
+  .dice-card { padding: 0.85rem !important; }
+  .players-card { padding: 1rem !important; }
+  .game-sidebar { padding: 0 4px; }
+}

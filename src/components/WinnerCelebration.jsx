@@ -1,3 +1,4 @@
+import Icon from './Icon.jsx';
 import React, { useEffect, useRef } from 'react';
 
 export default function WinnerCelebration({ winner, onComplete }) {
@@ -309,7 +310,7 @@ export default function WinnerCelebration({ winner, onComplete }) {
           onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
         >
           <span>View Final Standings</span>
-          <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>arrow_forward</span>
+          <Icon className="material-symbols-outlined" style={{ fontSize: '20px' }}>arrow_forward</Icon>
         </button>
       </div>
 
