@@ -129,7 +129,7 @@ export default function RegistrationScreen({ onContinue }) {
         newErrors[`${index}-org`] = 'Organisation is required';
         isValid = false;
       }
-      if (!/^\d{10}$/.test(player.phone.trim())) {
+      if (player.phone.trim() && !/^\d{10}$/.test(player.phone.trim())) {
         newErrors[`${index}-phone`] = 'Enter valid 10-digit number';
         isValid = false;
       }
@@ -720,7 +720,7 @@ export default function RegistrationScreen({ onContinue }) {
                           marginBottom: '0.35rem',
                           marginLeft: '2px'
                         }}>
-                          Phone Number (10 Digits) *
+                          Phone Number (10 Digits) (Optional)
                         </label>
                         <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
                           <Icon className="material-symbols-outlined" style={{

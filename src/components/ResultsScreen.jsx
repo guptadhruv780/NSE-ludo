@@ -141,7 +141,7 @@ export default function ResultsScreen({ players, onRestart }) {
                       {player.name} {isWinner && <span style={{ color: '#FBBF24', fontSize: '0.9rem', marginLeft: '6px' }}>★ Winner</span>}
                     </h3>
                     <p style={{ margin: '0.3rem 0 0 0', color: '#94A3B8', fontSize: '0.85rem' }}>
-                      {player.org} • {player.phone}
+                      {player.org}{player.phone ? ` • ${player.phone}` : ''}
                     </p>
                   </div>
                 </div>
