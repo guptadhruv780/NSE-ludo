@@ -340,15 +340,17 @@ export default function App() {
                     style={{
                       gridRow: tp.isBase ? `${tp.r + 1} / ${tp.r + 3}` : tp.r + 1,
                       gridColumn: tp.isBase ? `${tp.c + 1} / ${tp.c + 3}` : tp.c + 1,
-                      width: tp.isBase ? '28px' : '60%',
-                      height: tp.isBase ? '28px' : '60%',
+                      width: tp.isBase ? '28px' : '70%',
+                      height: tp.isBase ? '28px' : '70%',
                       placeSelf: 'center',
                       backgroundColor: getPlayerColorHex(player.color),
                       borderRadius: '50%',
-                      border: isSelectable ? '3px solid #fff' : '2px solid rgba(255,255,255,0.7)',
+                      border: isSelectable ? '3px solid #fff' : '2px solid #fff',
+                      outline: '2px solid rgba(13, 12, 28, 0.9)',
+                      outlineOffset: '1px',
                       boxShadow: isSelectable 
-                        ? '0 0 12px 6px rgba(255,255,255,0.9)' 
-                        : (isMoving ? '0 0 12px 4px rgba(255,255,255,0.8)' : '0 2px 4px rgba(0,0,0,0.4)'),
+                        ? '0 0 0 3px rgba(255,255,255,0.35), 0 0 14px 7px rgba(255,255,255,0.9), 0 4px 8px rgba(0,0,0,0.65)' 
+                        : (isMoving ? '0 0 0 3px rgba(255,255,255,0.45), 0 0 14px 6px rgba(255,255,255,0.85), 0 4px 8px rgba(0,0,0,0.65)' : '0 3px 0 rgba(0,0,0,0.65), 0 5px 9px rgba(0,0,0,0.5), inset 0 1px 2px rgba(255,255,255,0.45)'),
                       zIndex: isSelectable || isMoving ? 100 : 10,
                       transition: 'all 0.3s ease',
                       transform: `translate(${offsetX}px, ${offsetY}px) ${isSelectable || isMoving ? 'scale(1.3)' : 'scale(1)'}`,
